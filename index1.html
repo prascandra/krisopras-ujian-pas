@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplikasi Penjualan</title>
+  </head>
+  <body>
+    <h1>Aplikasi Penjualan</h1>
+
+    <label for="totalBayar">Total Bayar:</label>
+    <input type="number" id="totalBayar" name="totalBayar" />
+    <br />
+
+    <button onclick="hitungTotalBayar()">Hitung</button>
+
+    <h2 id="hasilDiskon"></h2>
+    <h2 id="hasilBayar"></h2>
+  </body>
+  <script>
+    function hitungTotalBayar() {
+      // Deklarasi Variabel
+      let totalBayar = document.getElementById("totalBayar").value;
+
+      // Pekondisian Untuk Dapatkan Diskon
+      if (totalBayar >= 1000000) {
+        // Deklarasi Variabel Untuk Diskon
+        let diskon = totalBayar * 0.05;
+        totalBayar = totalBayar - diskon; // Bisa Di Singkat => totalBayar -= diskon;
+
+        /*
+        Mengubah isi dari elemen id "hasilDiskon" dan
+        memunculkan hasil diskon ke layar Pengguna
+        */
+        document.getElementById("hasilDiskon").innerHTML =
+          "Total Diskon : " + diskon;
+      }
+      document.getElementById("hasilBayar").innerHTML =
+        "Total Bayar: " + totalBayar;
+    }
+  </script>
+</html>
+<!--
+  Soal => 
+    Buatlah Aplikasi Penjualan
+    input total bayar
+    jika total bayar lebih dari 1.000.000 maka dapat diskon 5%
+    jika dibawah itu dia tidak dapat diskon
+-->
