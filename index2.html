@@ -3,81 +3,36 @@
     <title>Aplikasi Berat Badan Ideal</title>
   </head>
   <body>
-    <!-- Pake table biar lebih rapi-->
-    <table>
-      <thead>
-        <tr>
-          <th>Aplikasi Berat Badan Ideal</th>
-        </tr>
-      </thead>
+    <h1>Aplikasi Berat Badan Ideal</h1>
 
-      <tbody>
-        <tr>
-          <td>Gender :</td>
-        </tr>
-        <tr>
-          <td>
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                id="laki-laki"
-                value="laki-laki "
-                checked
-              />Laki-laki
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                id="perempuan"
-                value="perempuan"
-              />Perempuan
-            </label>
-          </td>
-        </tr>
-        <tr>
-          <td>Mauskan tinggi anda (cm)</td>
-        </tr>
-        <tr>
-          <td><input type="number" id="inputTinggi" /></td>
-        </tr>
-        <tr>
-          <td><button onclick="hitung()">Hitung</button></td>
-        </tr>
-      </tbody>
+    <h3>Pria</h3>
+    <label for="tinggiPria">Masukan tinggi (cm)</label>
+    <input type="number" id="iptTinggiPria" />
+    <button onclick="menghitungBmiPria()">Hitung</button>
+    <p id="hasilPria"></p>
 
-      <tfoot>
-        <tr>
-          <td id="bmi">Hasilnya : 0 Kg</td>
-        </tr>
-      </tfoot>
-    </table>
+    <h3>Wanita</h3>
+    <label for="tinggiWanita">Masukan tinggi (cm)</label>
+    <input type="number" id="iptTinggiWanita" />
+    <button onclick="menghitungBmiWanita()">Hitung</button>
+    <p id="hasilWanita"></p>
   </body>
-  <script>
-    // deklarasi variabel
-    let tinggi, bmi;
-    function hitung() {
-      tinggi = document.getElementById("inputTinggi").value;
-
-      const checkGender = document.querySelector(
-        'input[type="radio"]:checked'
-      ).value;
-
-      switch (checkGender) {
-        case "laki-laki": // Pilihan 1
-          bmi = tinggi - 100 - (tinggi - 100) * 0.1;
-          break;
-
-        case "perempuan": // Pilihan 2
-          bmi = tinggi - 100 - (tinggi - 100) * 0.15;
-          break;
-      }
-      document.getElementById("bmi").innerHTML =
-        "Hasil Perhitungannya : " + bmi + "Kg";
-    }
-  </script>
 </html>
+<script>
+  function menghitungBmiPria() {
+    var tinggiPria = document.getElementById("iptTinggiPria").value;
+    var hasilPria = tinggiPria - 100 - (tinggiPria - 100) * 0.1;
+    document.getElementById("hasilPria").innerHTML =
+      "Berat Badan Ideal : " + hasilPria + "kg";
+  }
+
+  function menghitungBmiWanita() {
+    var tinggiWanita = document.getElementById("iptTinggiWanita").value;
+    var hasilWanita = tinggiWanita - 100 - (tinggiWanita - 100) * 0.15;
+    document.getElementById("hasilWanita").innerHTML =
+      "Berat Badan Ideal : " + hasilWanita + "kg";
+  }
+</script>
 <!--
     <==== Aplikasi Berat Badan Ideal ====>
         Pria :
