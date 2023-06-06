@@ -1,0 +1,7 @@
+Soal Ujian :
+
+  Soal Pertama => 
+    Buatlah Aplikasi Penjualan
+    input total bayar
+    jika total bayar lebih dari 1.000.000 maka dapat diskon 5%
+    jika dibawah itu dia tidak dapat diskon
