@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Aplikasi Berat Badan Ideal</title>
+  </head>
+  <body>
+    <h1>Aplikasi Berat Badan Ideal</h1>
+
+    <h3>Pria</h3>
+    <label for="tinggiPria">Masukan tinggi (cm)</label>
+    <input type="number" id="iptTinggiPria" />
+    <button onclick="menghitungBmiPria()">Hitung</button>
+    <p id="hasilPria"></p>
+
+    <h3>Wanita</h3>
+    <label for="tinggiWanita">Masukan tinggi (cm)</label>
+    <input type="number" id="iptTinggiWanita" />
+    <button onclick="menghitungBmiWanita()">Hitung</button>
+    <p id="hasilWanita"></p>
+  </body>
+</html>
+<script>
+  function menghitungBmiPria() {
+    var tinggiPria = document.getElementById("iptTinggiPria").value;
+    var hasilPria = tinggiPria - 100 - (tinggiPria - 100) * 0.1;
+    document.getElementById("hasilPria").innerHTML =
+      "Berat Badan Ideal : " + hasilPria + "kg";
+  }
+
+  function menghitungBmiWanita() {
+    var tinggiWanita = document.getElementById("iptTinggiWanita").value;
+    var hasilWanita = tinggiWanita - 100 - (tinggiWanita - 100) * 0.15;
+    document.getElementById("hasilWanita").innerHTML =
+      "Berat Badan Ideal : " + hasilWanita + "kg";
+  }
+</script>
+<!--
+    <==== Aplikasi Berat Badan Ideal ====>
+        Pria :
+        Berat badan ideal (kilogram) =
+        [tinggi badan (cm) - 100]-[(tinggi badan (cm) - 100) x 10%]  
+
+        Wanita :
+        Berat badan ideal (kilogram) =
+        [tinggi badan (cm) - 100]-[(tinggi badan (cm) - 100) x 15%]  
+-->
