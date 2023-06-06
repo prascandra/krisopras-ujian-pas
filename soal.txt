@@ -5,3 +5,13 @@ Soal Ujian :
     input total bayar
     jika total bayar lebih dari 1.000.000 maka dapat diskon 5%
     jika dibawah itu dia tidak dapat diskon
+    
+    Soal Kedua =>
+    Buatlah Aplikasi Berat Badan Ideal, Dengan ketentuan :
+        Pria :
+        Berat badan ideal (kilogram) =
+        [tinggi badan (cm) - 100]-[(tinggi badan (cm) - 100) x 10%]  
+
+        Wanita :
+        Berat badan ideal (kilogram) =
+        [tinggi badan (cm) - 100]-[(tinggi badan (cm) - 100) x 15%]  
